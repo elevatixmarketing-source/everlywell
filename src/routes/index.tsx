@@ -39,12 +39,12 @@ function AgeGate() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
       {/* Green background image — ~40% blurred, product still visible */}
-      <img
-        src={bgAsset.url}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-95 blur-sm"
-      />
+     <img
+  src={bgAsset.url}
+  alt=""
+  aria-hidden="true"
+  className="pointer-events-none absolute inset-0 h-full w-full object-contain p-4 opacity-90 blur-sm"
+/>
       {/* Subtle green tint so colors blend but product stays visible */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-900/10" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/5 via-transparent to-emerald-950/20" />
