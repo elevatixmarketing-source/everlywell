@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import bgAsset from "@/assets/bg.jpg.asset.json";
+import bgAsset from "@/assets/bg.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,19 +36,20 @@ function AgeGate() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
-      {/* Green background image — sharp so the real product shows through */}
+      {/* Green background image — ~40% blurred, product still visible */}
       <img
         src={bgAsset.url}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full scale-105 object-cover opacity-95"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-95 blur-sm"
       />
-      {/* Subtle darkening at edges only so the card stays readable */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-transparent to-emerald-950/30" />
+      {/* Subtle green tint so colors blend but product stays visible */}
+      <div className="pointer-events-none absolute inset-0 bg-emerald-900/10" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/5 via-transparent to-emerald-950/20" />
 
       {/* Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
-        <div className="w-full max-w-md rounded-3xl border border-emerald-400/20 bg-emerald-900/40 p-8 text-center shadow-2xl shadow-emerald-950/60 backdrop-blur-xl sm:p-10">
+        <div className="w-full max-w-md rounded-3xl border border-emerald-400/25 bg-emerald-800/55 p-8 text-center shadow-2xl shadow-emerald-950/70 backdrop-blur-2xl sm:p-10">
           {/* 18+ badge */}
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-emerald-300/30 bg-emerald-500/15">
             <span className="text-3xl font-black tracking-tight text-emerald-200">
