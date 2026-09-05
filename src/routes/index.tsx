@@ -41,7 +41,7 @@ function AgeGate() {
         src={bgAsset.url}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-95 blur-md"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-95 blur-sm"
       />
       {/* Light green tint so colors blend but image stays visible */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-900/20" />
