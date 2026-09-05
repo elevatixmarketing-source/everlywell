@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 const bgAsset = {
-  url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1920&auto=format&fit=crop"
+  url: "https://i.ibb.co/nsVjtBCL/bg.png"
 };
 
 export const Route = createFileRoute("/")({
