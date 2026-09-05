@@ -36,15 +36,16 @@ function AgeGate() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
-      {/* Green background image — sharp so the real product shows through */}
+      {/* Green background image — ~40% blurred, product still visible */}
       <img
         src={bgAsset.url}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full scale-105 object-cover opacity-95"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-95 blur-xl"
       />
-      {/* Subtle darkening at edges only so the card stays readable */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-transparent to-emerald-950/30" />
+      {/* Light green tint so colors blend but image stays visible */}
+      <div className="pointer-events-none absolute inset-0 bg-emerald-900/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/10 via-transparent to-emerald-950/30" />
 
       {/* Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
