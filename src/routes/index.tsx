@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-
-// Direct ImgBB Image CDN Link
-const bgAsset = {
-  url: "https://i.ibb.co/6c30Z3L3/image.png"
-};
+import bgImage from "@/assets/bg.png.PNG";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,9 +36,9 @@ function AgeGate() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
-      {/* Full-screen rectangular desktop background image */}
+      {/* Exact bg.png.PNG asset from repo */}
       <img
-        src={bgAsset.url}
+        src={bgImage}
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-sm opacity-90"
