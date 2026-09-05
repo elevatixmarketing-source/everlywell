@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+
+// Direct ImgBB Image CDN Link
 const bgAsset = {
-  url: "https://ibb.co/nsVjtBCL"
+  url: "https://i.ibb.co/6c30Z3L3/image.png"
 };
 
 export const Route = createFileRoute("/")({
@@ -38,18 +40,18 @@ function AgeGate() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
-      {/* Green background image — ~40% blurred, product still visible */}
-    <img
-  src={bgAsset.url}
-  alt=""
-  aria-hidden="true"
-  className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-sm"
-/>
-      {/* Subtle green tint so colors blend but product stays visible */}
+      {/* Full-screen rectangular desktop background image */}
+      <img
+        src={bgAsset.url}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-sm opacity-90"
+      />
+      {/* Subtle green tint overlay */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-900/10" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/5 via-transparent to-emerald-950/20" />
 
-      {/* Card */}
+      {/* Verification Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
         <div className="w-full max-w-md rounded-3xl border border-emerald-400/25 bg-emerald-800/55 p-8 text-center shadow-2xl shadow-emerald-950/70 backdrop-blur-2xl sm:p-10">
           {/* 18+ badge */}
