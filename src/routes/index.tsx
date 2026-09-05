@@ -43,9 +43,8 @@ function AgeGate() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full scale-105 object-cover opacity-95"
       />
-      {/* Light green tint + vignette so the card stays readable */}
-      <div className="pointer-events-none absolute inset-0 bg-emerald-950/25" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/10 via-transparent to-emerald-950/40" />
+      {/* Subtle darkening at edges only so the card stays readable */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/20 via-transparent to-emerald-950/30" />
 
       {/* Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
