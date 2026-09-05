@@ -45,7 +45,7 @@ function AgeGate() {
       />
       {/* Subtle green tint so colors blend but product stays visible */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-900/10" />
-      <div className="pointer-enents-none absolute inset-0 bg-gradient-to-b from-emerald-950/5 via-transparent to-emerald-950/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-950/5 via-transparent to-emerald-950/20" />
 
       {/* Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
