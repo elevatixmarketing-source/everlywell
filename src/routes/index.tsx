@@ -28,10 +28,9 @@ function AgeGate() {
   const [denied, setDenied] = useState(false);
 
   useEffect(() => {
-    if (denied) {
-      const t = setTimeout(() => setDenied(false), 4000);
-      return () => clearTimeout(t);
-    }
+    if (!denied) return;
+    const t = setTimeout(() => setDenied(false), 4000);
+    return () => clearTimeout(t);
   }, [denied]);
 
   return (
