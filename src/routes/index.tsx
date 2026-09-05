@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import greenBg from "@/assets/green-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,15 +36,16 @@ function AgeGate() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
-      {/* Blurred glowing background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-32 -top-32 h-[34rem] w-[34rem] rounded-full bg-emerald-500/30 blur-3xl" />
-        <div className="absolute -bottom-40 -right-24 h-[40rem] w-[40rem] rounded-full bg-green-400/25 blur-3xl" />
-        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-teal-300/20 blur-3xl" />
-      </div>
-
-      {/* Soft grain / dim layer */}
-      <div className="pointer-events-none absolute inset-0 bg-emerald-950/40 backdrop-blur-2xl" />
+      {/* Green background image — highly blurred, slightly visible */}
+      <img
+        src={greenBg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-70 blur-2xl"
+      />
+      {/* Green tint + dim layer so the card stays readable */}
+      <div className="pointer-events-none absolute inset-0 bg-emerald-950/55" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-900/30 via-emerald-950/40 to-emerald-950/70" />
 
       {/* Card */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4">
