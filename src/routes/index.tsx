@@ -63,7 +63,8 @@ function AgeGate() {
           <p className="mt-3 text-sm leading-relaxed text-emerald-100/80">
             This website contains age-restricted content. Please confirm that
             you are at least{" "}
-            <span className="font-semibold text-emerald-200">18 years old</span>{" "}
+            <span className="font-semibold text-emerald-200">18 years or
+            older</span>{" "}
             to continue.
           </p>
 
