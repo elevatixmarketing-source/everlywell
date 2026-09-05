@@ -38,10 +38,10 @@ function AgeGate() {
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
       {/* Green background image — highly blurred, slightly visible */}
       <img
-        src={greenBg}
+        src={bgAsset.url}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-70 blur-2xl"
+        className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-60 blur-2xl"
       />
       {/* Green tint + dim layer so the card stays readable */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-950/55" />
