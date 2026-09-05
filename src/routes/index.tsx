@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 const bgAsset = {
-  url: "https://i.ibb.co/nsVjtBCL/bg.png"
+  url: "https://i.ibb.co/6R220557/image.png"
 };
 
 export const Route = createFileRoute("/")({
@@ -39,11 +39,11 @@ function AgeGate() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-emerald-950">
       {/* Green background image — ~40% blurred, product still visible */}
-     <img
+    <img
   src={bgAsset.url}
   alt=""
   aria-hidden="true"
-  className="pointer-events-none absolute inset-0 h-full w-full object-contain p-4 opacity-90 blur-sm"
+  className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-sm"
 />
       {/* Subtle green tint so colors blend but product stays visible */}
       <div className="pointer-events-none absolute inset-0 bg-emerald-900/10" />
